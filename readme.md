@@ -5,8 +5,8 @@ This is a script written in Python.
 You can copy picture from Camera automatically.
 
 ## Description
-Copy files even isn't "hoge.jpg".   
-Check timestamp of EXIF or of OS and if datefile don't exist, make new one.
+Copy files even aren't "hoge.jpg".   
+Check timestamp of EXIF or of OS and if datefile don't exist, it make new one.
 It doesn't work custom folder format yet...
 
 ## Usage
