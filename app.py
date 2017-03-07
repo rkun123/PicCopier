@@ -4,8 +4,22 @@ import datetime
 import shutil
 from PIL import Image
 from PIL.ExifTags import TAGS
-path = sys.argv[1]
-pathto = sys.argv[2]
+
+import configLoader
+
+#from folder path
+path = ""
+#to folder path
+pathto = ""
+print(len(sys.argv))
+if len(sys.argv) > 1:
+    path = sys.argv[1]
+    pathto = sys.argv[2] + "/"
+else:
+    configs = configLoader.loader()
+    path = configs["frompath"]
+    pathto = configs["topath"] + "/"
+
 FIELD = "DateTimeOriginal"
 
 print("Hello World.")
@@ -42,7 +56,7 @@ for bufpath in dirs:
     res_before_path = path+"/"+bufpath
     bufdate = get_exif(path+"/"+bufpath,FIELD)
     if os.path.isdir(pathto+bufdate):
-        print("already file exist.")
+        print(pathto + bufdate + " already file exist.")
     else:
         os.mkdir(pathto+bufdate)
         print("make file "+bufdate)

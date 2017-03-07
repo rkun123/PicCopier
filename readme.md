@@ -14,6 +14,22 @@ It doesn't work custom folder format yet...
 - Python 3.5.7
 - pillow 3.3.1
 - (pip 8.1.2 or later)
+- [strictyaml](https://github.com/crdoconnor/strictyaml)
+
+### Preparing
+You can run either is settings file or not.
+If you don't use settings file:
+`app.py {fromfolderpath} {tofolderpath}`
+
+On the other hand,use setting file:
+```
+[copyrules.yml]
+#You need not add "/" at path last.
+#Path of folder which copy from
+frompath: {fromfolderpath}
+#Path of folder which copy into
+topath : tofolderpath
+```
 
 ### Run
 ```

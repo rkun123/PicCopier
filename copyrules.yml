@@ -1,0 +1,5 @@
+#You need not add "/" at path last.
+#Path of folder which copy from
+frompath: C:/Users/{yourname}/CopyFrom
+#Path of folder which copy into
+topath : C:/Users/{yourname}/Pictures
